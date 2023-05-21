@@ -16,22 +16,12 @@ module.exports = {
   },
   circom: {
     inputBasePath: "./circuits",
-    ptau: "https://hermezptau.blob.core.windows.net/ptau/powersOfTau28_hez_final_15.ptau",
+    ptau: "https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_15.ptau",
     circuits: [
       {
-        name: "division",
-        // No protocol, so it defaults to groth16
-      },
-      {
-        name: "simple-polynomial",
-        // Generate PLONK
-        protocol: "plonk",
-      },
-      {
-        name: "hash",
-        // Explicitly generate groth16
-        protocol: "groth16",
-      },
+        name: "Pedersen",
+        protocol: "groth16"
+      }
     ],
   },
 };
